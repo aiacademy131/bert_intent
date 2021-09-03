@@ -55,6 +55,9 @@ def convert_data(data_df):
 
 # 위에 정의한 convert_data 함수를 불러오는 함수를 정의
 def load_data(pandas_dataframe):
+    global LABEL_COLUMN
+    global DATA_COLUMN
+    
     data_df = pandas_dataframe
     data_df[DATA_COLUMN] = data_df[DATA_COLUMN].astype(str)
     data_df[LABEL_COLUMN] = data_df[LABEL_COLUMN].astype(int)
